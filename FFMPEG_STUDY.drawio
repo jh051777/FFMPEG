@@ -75,6 +75,15 @@
             <mxRectangle width="570" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-76" value="기본 cmd 구조" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="370" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-77" value="ffmpeg &lt;font color=&quot;#a80000&quot;&gt;[global_options]&lt;/font&gt; &lt;font color=&quot;#278007&quot;&gt;{[input_file_options] -i input_url} ...&lt;/font&gt; &lt;font color=&quot;#00109e&quot;&gt;{[output_file_options] output_url} ...&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="40" y="410" width="600" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-78" value="* global_options&lt;div style=&quot;font-size: 13px;&quot;&gt;) 입력, 출력 파일에 모두 적용 되는 옵션&lt;/div&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;) -y,-n 처럼 강제로 output을 덮어 쓸지 정하는 옵션이 있음&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#a80000;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="40" y="450" width="360" height="70" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
