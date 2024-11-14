@@ -4,91 +4,97 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-1" value="FFMPEG COMMAND" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-1" value="FFMPEG COMMAND" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="40" y="50" width="750" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-3" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=16;perimeterSpacing=1;" vertex="1" parent="1">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-3" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=16;perimeterSpacing=1;" parent="1" vertex="1">
           <mxGeometry x="40" y="120" width="750" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-4" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="ptMnUIj4V_PZviKKgXDt-3">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-4" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="ptMnUIj4V_PZviKKgXDt-3" vertex="1">
           <mxGeometry width="750" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-5" value="명령어" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" vertex="1" parent="ptMnUIj4V_PZviKKgXDt-4">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-5" value="명령어" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="ptMnUIj4V_PZviKKgXDt-4" vertex="1">
           <mxGeometry width="180" height="30" as="geometry">
             <mxRectangle width="180" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-6" value="기능" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" vertex="1" parent="ptMnUIj4V_PZviKKgXDt-4">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-6" value="기능" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="ptMnUIj4V_PZviKKgXDt-4" vertex="1">
           <mxGeometry x="180" width="570" height="30" as="geometry">
             <mxRectangle width="570" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-8" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="ptMnUIj4V_PZviKKgXDt-3">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-8" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="ptMnUIj4V_PZviKKgXDt-3" vertex="1">
           <mxGeometry y="30" width="750" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-9" value="ffmpeg" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;spacing=5;" vertex="1" parent="ptMnUIj4V_PZviKKgXDt-8">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-9" value="ffmpeg" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;spacing=5;" parent="ptMnUIj4V_PZviKKgXDt-8" vertex="1">
           <mxGeometry width="180" height="30" as="geometry">
             <mxRectangle width="180" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-10" value="command line 도구 ( 동영상 크기 및 고덱을 변경할 수 있다.)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;spacing=5;" vertex="1" parent="ptMnUIj4V_PZviKKgXDt-8">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-10" value="command line 도구 ( 동영상 크기 및 고덱을 변경할 수 있다.)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;spacing=5;" parent="ptMnUIj4V_PZviKKgXDt-8" vertex="1">
           <mxGeometry x="180" width="570" height="30" as="geometry">
             <mxRectangle width="570" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-12" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="ptMnUIj4V_PZviKKgXDt-3">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-12" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="ptMnUIj4V_PZviKKgXDt-3" vertex="1">
           <mxGeometry y="60" width="750" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-13" value="ffserver" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;spacing=5;" vertex="1" parent="ptMnUIj4V_PZviKKgXDt-12">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-13" value="ffserver" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;spacing=5;" parent="ptMnUIj4V_PZviKKgXDt-12" vertex="1">
           <mxGeometry width="180" height="30" as="geometry">
             <mxRectangle width="180" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-14" value="동영상 streaming을 위한 서버" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;spacing=5;" vertex="1" parent="ptMnUIj4V_PZviKKgXDt-12">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-14" value="동영상 streaming을 위한 서버" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;spacing=5;" parent="ptMnUIj4V_PZviKKgXDt-12" vertex="1">
           <mxGeometry x="180" width="570" height="30" as="geometry">
             <mxRectangle width="570" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-16" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="ptMnUIj4V_PZviKKgXDt-3">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-16" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="ptMnUIj4V_PZviKKgXDt-3" vertex="1">
           <mxGeometry y="90" width="750" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-17" value="ffplay" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;spacing=5;" vertex="1" parent="ptMnUIj4V_PZviKKgXDt-16">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-17" value="ffplay" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;spacing=5;" parent="ptMnUIj4V_PZviKKgXDt-16" vertex="1">
           <mxGeometry width="180" height="30" as="geometry">
             <mxRectangle width="180" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-18" value="SDL 이라는 오픈소스 기반으로 player를 해주는 컴포넌트" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;spacing=5;" vertex="1" parent="ptMnUIj4V_PZviKKgXDt-16">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-18" value="SDL 이라는 오픈소스 기반으로 player를 해주는 컴포넌트" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;spacing=5;" parent="ptMnUIj4V_PZviKKgXDt-16" vertex="1">
           <mxGeometry x="180" width="570" height="30" as="geometry">
             <mxRectangle width="570" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-20" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="ptMnUIj4V_PZviKKgXDt-3">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-20" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="ptMnUIj4V_PZviKKgXDt-3" vertex="1">
           <mxGeometry y="120" width="750" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-21" value="ffprobe" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;spacing=5;" vertex="1" parent="ptMnUIj4V_PZviKKgXDt-20">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-21" value="ffprobe" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;spacing=5;" parent="ptMnUIj4V_PZviKKgXDt-20" vertex="1">
           <mxGeometry width="180" height="30" as="geometry">
             <mxRectangle width="180" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-22" value="간단한 멀티미디어(동영상) 분석 도구" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;spacing=5;" vertex="1" parent="ptMnUIj4V_PZviKKgXDt-20">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-22" value="간단한 멀티미디어(동영상) 분석 도구" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;spacing=5;" parent="ptMnUIj4V_PZviKKgXDt-20" vertex="1">
           <mxGeometry x="180" width="570" height="30" as="geometry">
             <mxRectangle width="570" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-76" value="기본 cmd 구조" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-76" value="기본 cmd 구조" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="40" y="330" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-77" value="ffmpeg &lt;font color=&quot;#a80000&quot;&gt;[global_options]&lt;/font&gt; &lt;font color=&quot;#278007&quot;&gt;{[input_file_options] -i input_url} ...&lt;/font&gt; &lt;font color=&quot;#00109e&quot;&gt;{[output_file_options] output_url} ...&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="1">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-77" value="ffmpeg &lt;font color=&quot;#a80000&quot;&gt;[global_options]&lt;/font&gt; &lt;font color=&quot;#278007&quot;&gt;{[input_file_options] -i input_url} ...&lt;/font&gt; &lt;font color=&quot;#00109e&quot;&gt;{[output_file_options] output_url} ...&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="40" y="370" width="600" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-78" value="&lt;b&gt;* global_options&lt;/b&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;) 입력, 출력 파일에 모두 적용 되는 옵션&lt;/div&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;) -y,-n 처럼 강제로 output을 덮어 쓸지 정하는 옵션이 있음&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#a80000;fontSize=13;" vertex="1" parent="1">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-78" value="&lt;b&gt;* global_options&lt;/b&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;) 입력, 출력 파일에 모두 적용 되는 옵션&lt;/div&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;) -y,-n 처럼 강제로 output을 덮어 쓸지 정하는 옵션이 있음&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#a80000;fontSize=13;" parent="1" vertex="1">
           <mxGeometry x="40" y="410" width="360" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-79" value="&lt;b&gt;* input_file_option &amp;amp; input_url&lt;/b&gt;&lt;div&gt;) input에 사용되는 옵션으로 -i 앞에 위치함&lt;/div&gt;&lt;div&gt;) input이 여러개가 사용될 경우, 각 옵션들을 각각 input에 적용된다&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#268006;" vertex="1" parent="1">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-79" value="&lt;b&gt;* input_file_option &amp;amp; input_url&lt;/b&gt;&lt;div&gt;) input에 사용되는 옵션으로 -i 앞에 위치함&lt;/div&gt;&lt;div&gt;) input이 여러개가 사용될 경우, 각 옵션들을 각각 input에 적용된다&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#268006;" parent="1" vertex="1">
           <mxGeometry x="40" y="490" width="360" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-80" value="&lt;b&gt;* output_file_options &amp;amp; output_url&lt;/b&gt;&lt;div&gt;) output 파일이름과 옵션들&lt;/div&gt;&lt;div&gt;) 출력을 많이 변경하므로 여기에 옵션이 많이 사용됨&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#00109d;" vertex="1" parent="1">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-80" value="&lt;b&gt;* output_file_options &amp;amp; output_url&lt;/b&gt;&lt;div&gt;) output 파일이름과 옵션들&lt;/div&gt;&lt;div&gt;) 출력을 많이 변경하므로 여기에 옵션이 많이 사용됨&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#00109d;" parent="1" vertex="1">
           <mxGeometry x="40" y="570" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="xB45A97ij3tuCxRrMWK4-1" value="mp4 파일에서 비디오 or 오디오 추출하기" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="690" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xB45A97ij3tuCxRrMWK4-2" value="&lt;b style=&quot;font-size: 16px;&quot;&gt;&lt;u&gt;) 비디오 제거&lt;/u&gt;&lt;/b&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;ffmpeg -i input.mp4 -vn output.mp4&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;&lt;u&gt;)오디오 제거&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;ffmpeg -i input.mp4 -an output.mp4&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="40" y="730" width="400" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
