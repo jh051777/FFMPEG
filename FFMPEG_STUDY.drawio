@@ -7,7 +7,7 @@
         <mxCell id="ptMnUIj4V_PZviKKgXDt-1" value="FFMPEG COMMAND" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="40" y="50" width="750" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ptMnUIj4V_PZviKKgXDt-3" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=16;" vertex="1" parent="1">
+        <mxCell id="ptMnUIj4V_PZviKKgXDt-3" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=16;perimeterSpacing=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="120" width="750" height="150" as="geometry" />
         </mxCell>
         <mxCell id="ptMnUIj4V_PZviKKgXDt-4" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="ptMnUIj4V_PZviKKgXDt-3">
