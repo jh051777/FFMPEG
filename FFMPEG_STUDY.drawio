@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.4">
   <diagram name="페이지-1" id="8cRWzu_WHAwFlIVNXjVE">
-    <mxGraphModel dx="986" dy="672" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1215" dy="672" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -94,7 +94,7 @@
           <mxGeometry x="40" y="690" width="320" height="30" as="geometry" />
         </mxCell>
         <mxCell id="xB45A97ij3tuCxRrMWK4-2" value="&lt;b style=&quot;font-size: 16px;&quot;&gt;&lt;u&gt;) 비디오 제거&lt;/u&gt;&lt;/b&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;ffmpeg -i input.mp4 -vn output.mp4&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;&lt;u&gt;)오디오 제거&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;ffmpeg -i input.mp4 -an output.mp4&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;) -c copy: 코덱을 그냥 카피하라는 의미, 오디오 비디오 모두에 해당&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;) -acode copy: 오디오 코덱을 카피하라는 의미 (-vcode: 비디오 코덱)&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;) -c:a copy: 코덱인데 오디오라는 의미( -c:v 이면 비디오)&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="40" y="730" width="500" height="230" as="geometry" />
+          <mxGeometry x="40" y="730" width="500" height="350" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
