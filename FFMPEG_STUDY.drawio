@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="24.8.6">
   <diagram name="페이지-1" id="8cRWzu_WHAwFlIVNXjVE">
-    <mxGraphModel dx="781" dy="508" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1102" dy="718" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -147,9 +147,6 @@
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-34" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;perimeterSpacing=0;" vertex="1" parent="1">
           <mxGeometry x="1841" y="80" width="38" height="360" as="geometry" />
         </mxCell>
-        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-24" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.x" vertex="1" parent="1">
-          <mxGeometry x="2375" y="83" width="8" height="7" as="geometry" />
-        </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-29" value="" style="group" vertex="1" connectable="0" parent="1">
           <mxGeometry x="2349" y="407" width="20" height="20" as="geometry" />
         </mxCell>
@@ -166,13 +163,10 @@
           <mxGeometry x="12" y="12" width="8" height="8" as="geometry" />
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-30" value="00 : 10" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="2000" y="402" width="60" height="30" as="geometry" />
+          <mxGeometry x="1980" y="400" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-31" value="&lt;ul&gt;&lt;li&gt;영상 재생 기능&lt;/li&gt;&lt;li&gt;영상 형식 변경 기능&lt;/li&gt;&lt;li&gt;영상 재생시간 자르기 기능&lt;/li&gt;&lt;li&gt;프레임 다운그레이드&lt;/li&gt;&lt;li&gt;라이브 스트리밍 기능&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
           <mxGeometry x="1748" y="490" width="372" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-32" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="2340" y="85.5" width="11" height="2" as="geometry" />
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-23" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1748" y="80" width="640" height="12" as="geometry" />
@@ -203,6 +197,21 @@
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-43" value="" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=5.937402513292;rotation=0;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-41">
           <mxGeometry x="5" y="4" width="10" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-24" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.x" vertex="1" parent="1">
+          <mxGeometry x="2375" y="83" width="8" height="7" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-32" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2340" y="85.5" width="11" height="2" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-45" value="영상 파일_4.mp4" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="1748" y="150" width="82" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-46" value="00:48.887" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=6;" vertex="1" parent="1">
+          <mxGeometry x="1830" y="150" width="48" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-47" value="영상 파일_4.mp4" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;strokeColor=default;" vertex="1" parent="1">
+          <mxGeometry x="1900" y="100" width="63" height="12" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
