@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="24.8.6">
   <diagram name="페이지-1" id="8cRWzu_WHAwFlIVNXjVE">
-    <mxGraphModel dx="1102" dy="718" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="781" dy="508" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -165,8 +165,8 @@
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-30" value="00 : 10" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="1980" y="400" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-31" value="&lt;ul&gt;&lt;li&gt;영상 재생 기능&lt;/li&gt;&lt;li&gt;영상 형식 변경 기능&lt;/li&gt;&lt;li&gt;영상 재생시간 자르기 기능&lt;/li&gt;&lt;li&gt;프레임 다운그레이드&lt;/li&gt;&lt;li&gt;라이브 스트리밍 기능&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
-          <mxGeometry x="1748" y="490" width="372" height="80" as="geometry" />
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-31" value="&lt;ul style=&quot;font-size: 14px;&quot;&gt;&lt;li style=&quot;font-size: 14px;&quot;&gt;영상 재생 기능&lt;/li&gt;&lt;li style=&quot;font-size: 14px;&quot;&gt;영상 형식 변경 기능 (ex. MP4, MOV, WMV, WebM, AVI...)&lt;/li&gt;&lt;li style=&quot;font-size: 14px;&quot;&gt;영상 길이 자르기 기능&lt;/li&gt;&lt;li style=&quot;font-size: 14px;&quot;&gt;프레임 다운그레이드&lt;/li&gt;&lt;li style=&quot;font-size: 14px;&quot;&gt;라이브 스트리밍 기능&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=top;overflow=hidden;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1748" y="450" width="512" height="150" as="geometry" />
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-23" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1748" y="80" width="640" height="12" as="geometry" />
