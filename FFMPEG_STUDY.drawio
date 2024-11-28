@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="24.8.6">
   <diagram name="페이지-1" id="8cRWzu_WHAwFlIVNXjVE">
-    <mxGraphModel dx="1352" dy="812" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2140" dy="691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -180,8 +180,115 @@
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-54" value="RTSP" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="1693" y="50" width="750" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-55" value="&lt;div&gt;&lt;b style=&quot;font-size: 14px; background-color: initial;&quot;&gt;RTSP&lt;/b&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 14px; background-color: initial;&quot;&gt;&lt;div&gt;&lt;b style=&quot;font-size: 14px; background-color: initial;&quot;&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;R&lt;/b&gt;&lt;span style=&quot;font-size: 14px; background-color: initial;&quot;&gt;eal &lt;/span&gt;&lt;b style=&quot;font-size: 14px; background-color: initial;&quot;&gt;T&lt;/b&gt;&lt;span style=&quot;font-size: 14px; background-color: initial;&quot;&gt;ime &lt;/span&gt;&lt;b style=&quot;font-size: 14px; background-color: initial;&quot;&gt;S&lt;/b&gt;&lt;span style=&quot;font-size: 14px; background-color: initial;&quot;&gt;treaming &lt;/span&gt;&lt;b style=&quot;font-size: 14px; background-color: initial;&quot;&gt;P&lt;/b&gt;&lt;span style=&quot;font-size: 14px; background-color: initial;&quot;&gt;rotocol&lt;/span&gt;&lt;div&gt;&lt;div&gt;스트리밍 서비스를 제어하기 위한 프로토콜&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;RTP&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;R&lt;/b&gt;eal-time &lt;b&gt;T&lt;/b&gt;ransport &lt;b&gt;P&lt;/b&gt;rotocol&lt;/font&gt;&lt;/div&gt;&lt;div&gt;IP 네트워크를 통해 오디오 / 비디오 데이터를 전송하기 위한 표준 패킷 포맷을 정의&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="1683" y="120" width="760" height="410" as="geometry" />
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-55" value="&lt;div&gt;&lt;b style=&quot;font-size: 14px; background-color: initial;&quot;&gt;RTSP&lt;/b&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 14px; background-color: initial;&quot;&gt;&lt;div&gt;&lt;b style=&quot;font-size: 14px; background-color: initial;&quot;&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;R&lt;/b&gt;&lt;span style=&quot;font-size: 14px; background-color: initial;&quot;&gt;eal &lt;/span&gt;&lt;b style=&quot;font-size: 14px; background-color: initial;&quot;&gt;T&lt;/b&gt;&lt;span style=&quot;font-size: 14px; background-color: initial;&quot;&gt;ime &lt;/span&gt;&lt;b style=&quot;font-size: 14px; background-color: initial;&quot;&gt;S&lt;/b&gt;&lt;span style=&quot;font-size: 14px; background-color: initial;&quot;&gt;treaming &lt;/span&gt;&lt;b style=&quot;font-size: 14px; background-color: initial;&quot;&gt;P&lt;/b&gt;&lt;span style=&quot;font-size: 14px; background-color: initial;&quot;&gt;rotocol&lt;/span&gt;&lt;div&gt;&lt;div&gt;- 스트리밍 서비스를 제어하기 위한 프로토콜&lt;/div&gt;&lt;div&gt;- 클라이언트와 서버 간의 상호 작용을 추적하고 유지하기 위해 세션 아이디를 사용&lt;/div&gt;&lt;div&gt;- 실제로 비디오, 오디오 등 데이터를 전송하지 않음 (RTP가 실제 전송)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;RTP&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;R&lt;/b&gt;eal-time &lt;b&gt;T&lt;/b&gt;ransport &lt;b&gt;P&lt;/b&gt;rotocol&lt;/font&gt;&lt;/div&gt;&lt;div&gt;- IP 네트워크를 통해 오디오 / 비디오 데이터를 전송하기 위한 표준 패킷 포맷을 정의&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;stateless / stateful&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1683" y="120" width="760" height="530" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-56" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="1683" y="240" width="620" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-57" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-56">
+          <mxGeometry width="620" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-58" value="명령어" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-57">
+          <mxGeometry width="220" height="23" as="geometry">
+            <mxRectangle width="220" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-59" value="내용" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-57">
+          <mxGeometry x="220" width="400" height="23" as="geometry">
+            <mxRectangle width="400" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-61" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-56">
+          <mxGeometry y="23" width="620" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-62" value="OPTION" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-61">
+          <mxGeometry width="220" height="24" as="geometry">
+            <mxRectangle width="220" height="24" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-63" value="서버가 지원하는 명령어나 기능을 확인하기 위해 사용" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;spacingLeft=5;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-61">
+          <mxGeometry x="220" width="400" height="24" as="geometry">
+            <mxRectangle width="400" height="24" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-65" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-56">
+          <mxGeometry y="47" width="620" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-66" value="DESCRIBE" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-65">
+          <mxGeometry width="220" height="23" as="geometry">
+            <mxRectangle width="220" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-67" value="클라이언트가 서버에게 미디어에 대한 정보를 요청" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;spacingLeft=5;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-65">
+          <mxGeometry x="220" width="400" height="23" as="geometry">
+            <mxRectangle width="400" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-84" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-56">
+          <mxGeometry y="70" width="620" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-85" value="SETUP" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-84">
+          <mxGeometry width="220" height="23" as="geometry">
+            <mxRectangle width="220" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-86" value="클라이언트는 서버에게 어떻게 전송되어야 하는지 설정" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;spacingLeft=5;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-84">
+          <mxGeometry x="220" width="400" height="23" as="geometry">
+            <mxRectangle width="400" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-81" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-56">
+          <mxGeometry y="93" width="620" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-82" value="PLAY" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-81">
+          <mxGeometry width="220" height="23" as="geometry">
+            <mxRectangle width="220" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-83" value="클라이언트가 서버에 미디어 재생을 요청" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;spacingLeft=5;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-81">
+          <mxGeometry x="220" width="400" height="23" as="geometry">
+            <mxRectangle width="400" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-78" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-56">
+          <mxGeometry y="116" width="620" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-79" value="PAUSE" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-78">
+          <mxGeometry width="220" height="23" as="geometry">
+            <mxRectangle width="220" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-80" value="클라이언트가 서버에 스트림 일시 중지를 요청" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;spacingLeft=5;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-78">
+          <mxGeometry x="220" width="400" height="23" as="geometry">
+            <mxRectangle width="400" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-75" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-56">
+          <mxGeometry y="139" width="620" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-76" value="RECORD" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-75">
+          <mxGeometry width="220" height="23" as="geometry">
+            <mxRectangle width="220" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-77" value="클라이언트가 서버에게 미디어 데이터 녹화를 요청" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;spacingLeft=5;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-75">
+          <mxGeometry x="220" width="400" height="23" as="geometry">
+            <mxRectangle width="400" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-72" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-56">
+          <mxGeometry y="162" width="620" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-73" value="TEARDOWN" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-72">
+          <mxGeometry width="220" height="23" as="geometry">
+            <mxRectangle width="220" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-74" value="세션을 종료하고 서버와 의 연결을 닫음" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;spacingLeft=5;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-72">
+          <mxGeometry x="220" width="400" height="23" as="geometry">
+            <mxRectangle width="400" height="23" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
