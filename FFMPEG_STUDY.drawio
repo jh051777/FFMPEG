@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="24.8.6">
   <diagram name="페이지-1" id="8cRWzu_WHAwFlIVNXjVE">
-    <mxGraphModel dx="2242" dy="957" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1627" dy="541" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -382,6 +382,9 @@
             <mxPoint x="2038.7920000000001" y="1019.995" as="sourcePoint" />
             <mxPoint x="1781.0040000000001" y="1019.995" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-105" value="RTSP 동작과정" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="1679" y="560" width="111" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
