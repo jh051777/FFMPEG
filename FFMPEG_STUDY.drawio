@@ -399,204 +399,204 @@
           <mxGeometry x="1680" y="1520" width="640" height="70" as="geometry" />
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-112" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="1679" y="1632" width="760" height="244" as="geometry" />
+          <mxGeometry x="1679" y="1632" width="771" height="244" as="geometry" />
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-113" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-112">
-          <mxGeometry width="760" height="20" as="geometry" />
+          <mxGeometry width="771" height="20" as="geometry" />
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-114" value="필드명" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;fontStyle=1" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-113">
-          <mxGeometry width="160" height="20" as="geometry">
-            <mxRectangle width="160" height="20" as="alternateBounds" />
+          <mxGeometry width="162" height="20" as="geometry">
+            <mxRectangle width="162" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-115" value="크기(bit)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;fontStyle=1" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-113">
-          <mxGeometry x="160" width="71" height="20" as="geometry">
-            <mxRectangle width="71" height="20" as="alternateBounds" />
+          <mxGeometry x="162" width="69" height="20" as="geometry">
+            <mxRectangle width="69" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-116" value="설명" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;fontStyle=1" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-113">
-          <mxGeometry x="231" width="529" height="20" as="geometry">
-            <mxRectangle width="529" height="20" as="alternateBounds" />
+          <mxGeometry x="231" width="540" height="20" as="geometry">
+            <mxRectangle width="540" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-117" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-112">
-          <mxGeometry y="20" width="760" height="20" as="geometry" />
+          <mxGeometry y="20" width="771" height="20" as="geometry" />
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-118" value="V (Version)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-117">
-          <mxGeometry width="160" height="20" as="geometry">
-            <mxRectangle width="160" height="20" as="alternateBounds" />
+          <mxGeometry width="162" height="20" as="geometry">
+            <mxRectangle width="162" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-119" value="2" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-117">
-          <mxGeometry x="160" width="71" height="20" as="geometry">
-            <mxRectangle width="71" height="20" as="alternateBounds" />
+          <mxGeometry x="162" width="69" height="20" as="geometry">
+            <mxRectangle width="69" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-120" value="RTP 프로토콜의 버전. 항상 2로 설정 (현재는 RTP/RTCP 버전 2가 표준)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-117">
-          <mxGeometry x="231" width="529" height="20" as="geometry">
-            <mxRectangle width="529" height="20" as="alternateBounds" />
+          <mxGeometry x="231" width="540" height="20" as="geometry">
+            <mxRectangle width="540" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-121" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-112">
-          <mxGeometry y="40" width="760" height="20" as="geometry" />
+          <mxGeometry y="40" width="771" height="20" as="geometry" />
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-122" value="P (Padding)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-121">
-          <mxGeometry width="160" height="20" as="geometry">
-            <mxRectangle width="160" height="20" as="alternateBounds" />
+          <mxGeometry width="162" height="20" as="geometry">
+            <mxRectangle width="162" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-123" value="1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-121">
-          <mxGeometry x="160" width="71" height="20" as="geometry">
-            <mxRectangle width="71" height="20" as="alternateBounds" />
+          <mxGeometry x="162" width="69" height="20" as="geometry">
+            <mxRectangle width="69" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-124" value="패딩이 있는지 여부. 패딩은 페이로드의 크기가 4바이트로 정렬되도록 추가되는 바이트" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-121">
-          <mxGeometry x="231" width="529" height="20" as="geometry">
-            <mxRectangle width="529" height="20" as="alternateBounds" />
+          <mxGeometry x="231" width="540" height="20" as="geometry">
+            <mxRectangle width="540" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-125" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-112">
-          <mxGeometry y="60" width="760" height="20" as="geometry" />
+          <mxGeometry y="60" width="771" height="20" as="geometry" />
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-126" value="X (Extension)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-125">
-          <mxGeometry width="160" height="20" as="geometry">
-            <mxRectangle width="160" height="20" as="alternateBounds" />
+          <mxGeometry width="162" height="20" as="geometry">
+            <mxRectangle width="162" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-127" value="1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-125">
-          <mxGeometry x="160" width="71" height="20" as="geometry">
-            <mxRectangle width="71" height="20" as="alternateBounds" />
+          <mxGeometry x="162" width="69" height="20" as="geometry">
+            <mxRectangle width="69" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-128" value="확장 헤더 필드를 사용하는지 여부를 나타냄. X=1 일 경우, 추가적인 확장 헤더 필드가 존재" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-125">
-          <mxGeometry x="231" width="529" height="20" as="geometry">
-            <mxRectangle width="529" height="20" as="alternateBounds" />
+          <mxGeometry x="231" width="540" height="20" as="geometry">
+            <mxRectangle width="540" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-129" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-112">
-          <mxGeometry y="80" width="760" height="20" as="geometry" />
+          <mxGeometry y="80" width="771" height="20" as="geometry" />
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-130" value="CC (CSRC Count)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-129">
-          <mxGeometry width="160" height="20" as="geometry">
-            <mxRectangle width="160" height="20" as="alternateBounds" />
+          <mxGeometry width="162" height="20" as="geometry">
+            <mxRectangle width="162" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-131" value="4" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-129">
-          <mxGeometry x="160" width="71" height="20" as="geometry">
-            <mxRectangle width="71" height="20" as="alternateBounds" />
+          <mxGeometry x="162" width="69" height="20" as="geometry">
+            <mxRectangle width="69" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-132" value="CSRC 목록의 개수. CSRC는 Contributing Source를 의미하며, 멀티미디어 스트림을 생성한 출저를 나타냄" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-129">
-          <mxGeometry x="231" width="529" height="20" as="geometry">
-            <mxRectangle width="529" height="20" as="alternateBounds" />
+          <mxGeometry x="231" width="540" height="20" as="geometry">
+            <mxRectangle width="540" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-133" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-112">
-          <mxGeometry y="100" width="760" height="20" as="geometry" />
+          <mxGeometry y="100" width="771" height="20" as="geometry" />
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-134" value="M (Marker)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-133">
-          <mxGeometry width="160" height="20" as="geometry">
-            <mxRectangle width="160" height="20" as="alternateBounds" />
+          <mxGeometry width="162" height="20" as="geometry">
+            <mxRectangle width="162" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-135" value="1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-133">
-          <mxGeometry x="160" width="71" height="20" as="geometry">
-            <mxRectangle width="71" height="20" as="alternateBounds" />
+          <mxGeometry x="162" width="69" height="20" as="geometry">
+            <mxRectangle width="69" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-136" value="마커 비트로, 특정 이벤트를 나타냄 (ex. 패킷의 마지막)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-133">
-          <mxGeometry x="231" width="529" height="20" as="geometry">
-            <mxRectangle width="529" height="20" as="alternateBounds" />
+          <mxGeometry x="231" width="540" height="20" as="geometry">
+            <mxRectangle width="540" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-137" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-112">
-          <mxGeometry y="120" width="760" height="20" as="geometry" />
+          <mxGeometry y="120" width="771" height="20" as="geometry" />
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-138" value="PT (Payload Type)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-137">
-          <mxGeometry width="160" height="20" as="geometry">
-            <mxRectangle width="160" height="20" as="alternateBounds" />
+          <mxGeometry width="162" height="20" as="geometry">
+            <mxRectangle width="162" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-139" value="7" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-137">
-          <mxGeometry x="160" width="71" height="20" as="geometry">
-            <mxRectangle width="71" height="20" as="alternateBounds" />
+          <mxGeometry x="162" width="69" height="20" as="geometry">
+            <mxRectangle width="69" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-140" value="페이로드 유형을 나타내는 필드로, 전송되는 미디어의 종류를 구분. (ex. 비디오, 오디오)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-137">
-          <mxGeometry x="231" width="529" height="20" as="geometry">
-            <mxRectangle width="529" height="20" as="alternateBounds" />
+          <mxGeometry x="231" width="540" height="20" as="geometry">
+            <mxRectangle width="540" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-141" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-112">
-          <mxGeometry y="140" width="760" height="20" as="geometry" />
+          <mxGeometry y="140" width="771" height="20" as="geometry" />
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-142" value="Sequence Number" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-141">
-          <mxGeometry width="160" height="20" as="geometry">
-            <mxRectangle width="160" height="20" as="alternateBounds" />
+          <mxGeometry width="162" height="20" as="geometry">
+            <mxRectangle width="162" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-143" value="16" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-141">
-          <mxGeometry x="160" width="71" height="20" as="geometry">
-            <mxRectangle width="71" height="20" as="alternateBounds" />
+          <mxGeometry x="162" width="69" height="20" as="geometry">
+            <mxRectangle width="69" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-144" value="패킷의 순서를 나타내는 시퀀스 번호. 수신자가 패킷의 손실을 감지하는데 사용됨" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-141">
-          <mxGeometry x="231" width="529" height="20" as="geometry">
-            <mxRectangle width="529" height="20" as="alternateBounds" />
+          <mxGeometry x="231" width="540" height="20" as="geometry">
+            <mxRectangle width="540" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-145" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-112">
-          <mxGeometry y="160" width="760" height="20" as="geometry" />
+          <mxGeometry y="160" width="771" height="20" as="geometry" />
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-146" value="Timestamp" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-145">
-          <mxGeometry width="160" height="20" as="geometry">
-            <mxRectangle width="160" height="20" as="alternateBounds" />
+          <mxGeometry width="162" height="20" as="geometry">
+            <mxRectangle width="162" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-147" value="32" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-145">
-          <mxGeometry x="160" width="71" height="20" as="geometry">
-            <mxRectangle width="71" height="20" as="alternateBounds" />
+          <mxGeometry x="162" width="69" height="20" as="geometry">
+            <mxRectangle width="69" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-148" value="미디어 스트림의 타임스탬프를 나타냄. 보통 RTP 세션 내에서 각 패킷의 샘플 시간(초)을 표현" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-145">
-          <mxGeometry x="231" width="529" height="20" as="geometry">
-            <mxRectangle width="529" height="20" as="alternateBounds" />
+          <mxGeometry x="231" width="540" height="20" as="geometry">
+            <mxRectangle width="540" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-149" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-112">
-          <mxGeometry y="180" width="760" height="32" as="geometry" />
+          <mxGeometry y="180" width="771" height="32" as="geometry" />
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-150" value="SSRC(Synchronization Source)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-149">
-          <mxGeometry width="160" height="32" as="geometry">
-            <mxRectangle width="160" height="32" as="alternateBounds" />
+          <mxGeometry width="162" height="32" as="geometry">
+            <mxRectangle width="162" height="32" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-151" value="32" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-149">
-          <mxGeometry x="160" width="71" height="32" as="geometry">
-            <mxRectangle width="71" height="32" as="alternateBounds" />
+          <mxGeometry x="162" width="69" height="32" as="geometry">
+            <mxRectangle width="69" height="32" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-152" value="이 스트림의 동기화 출처를 나타내는 고유 식별자" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-149">
-          <mxGeometry x="231" width="529" height="32" as="geometry">
-            <mxRectangle width="529" height="32" as="alternateBounds" />
+          <mxGeometry x="231" width="540" height="32" as="geometry">
+            <mxRectangle width="540" height="32" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-153" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-112">
-          <mxGeometry y="212" width="760" height="32" as="geometry" />
+          <mxGeometry y="212" width="771" height="32" as="geometry" />
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-154" value="CSRC (Contributing Sources)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-153">
-          <mxGeometry width="160" height="32" as="geometry">
-            <mxRectangle width="160" height="32" as="alternateBounds" />
+          <mxGeometry width="162" height="32" as="geometry">
+            <mxRectangle width="162" height="32" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-155" value="0~15 x 32" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-153">
-          <mxGeometry x="160" width="71" height="32" as="geometry">
-            <mxRectangle width="71" height="32" as="alternateBounds" />
+          <mxGeometry x="162" width="69" height="32" as="geometry">
+            <mxRectangle width="69" height="32" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-156" value="(선택 사항) 이 패킷이 포함하는 기여하는 출처 목록. CRSC 필드는 CC 필드로 지정된 수만큼 존재할 수 있음" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=middle;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-153">
-          <mxGeometry x="231" width="529" height="32" as="geometry">
-            <mxRectangle width="529" height="32" as="alternateBounds" />
+          <mxGeometry x="231" width="540" height="32" as="geometry">
+            <mxRectangle width="540" height="32" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-157" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;RTP header&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
