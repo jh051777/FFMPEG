@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="24.8.6">
   <diagram name="페이지-1" id="8cRWzu_WHAwFlIVNXjVE">
-    <mxGraphModel dx="1366" dy="646" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1619" dy="646" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -725,8 +725,8 @@
             <mxRectangle width="240" height="20" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-190" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;RTCP &lt;/b&gt;(&lt;b&gt;R&lt;/b&gt;eal &lt;b&gt;T&lt;/b&gt;ime &lt;b&gt;C&lt;/b&gt;ontrol &lt;b&gt;P&lt;/b&gt;rotocol)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="1679" y="1000" width="721" height="280" as="geometry" />
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-190" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;RTCP &lt;/b&gt;(&lt;b&gt;R&lt;/b&gt;eal &lt;b&gt;T&lt;/b&gt;ime &lt;b&gt;C&lt;/b&gt;ontrol &lt;b&gt;P&lt;/b&gt;rotocol)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;- RTP 스트림의 품질 관리 및 모니터링을 담당&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;- 주기적으로 송수신자 간에 네트워크 품질, 패킷 손실, 지연 시간, 지터 등을 공유 (송신자 보고서: SR / 수신자 보고서: RR)&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1679" y="1040" width="721" height="240" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
