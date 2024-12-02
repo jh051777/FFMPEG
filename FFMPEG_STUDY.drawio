@@ -792,7 +792,7 @@
           <mxGeometry x="1679" y="1040" width="721" height="80" as="geometry" />
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-204" value="FFmpeg 라이브러리" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="40" y="1169" width="160" height="30" as="geometry" />
+          <mxGeometry x="40" y="1200" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-205" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="1679" y="1120" width="681" height="286" as="geometry" />
@@ -873,6 +873,55 @@
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-228" value="- 특정 응요 프로그램에 필요한 추가 데이터를 포함할 수 있는 패킷&lt;div&gt;- RTCP가 아닌 다른 프로토콜과 함께 사용할 수 있는 커스텀 데이터를 전송&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-226">
           <mxGeometry x="137" width="544" height="48" as="geometry">
             <mxRectangle width="544" height="48" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-239" value="libavcodec: 인코딩과 디코딩 기능을 제공&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;libavformat: 스트리밍 또는 입출력에 관련된 기능들을 제공&lt;/div&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;libavutil: 메모리 관리, 수학적 계산, 문자열 처리 등 의 기능을 제공&lt;/div&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;libswscale: 해상도 변환 및 색 공간을 변환하는 기능 제공&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1240" width="510" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-241" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;libavcodec (코덱 라이브러리)&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="1400" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-242" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1440" width="750" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-243" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-242">
+          <mxGeometry width="750" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-244" value="avcodec_find_decoder(): 특정 코덱의 디코더를 찾는 함수&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;AVCodec* avcodec_find_decoder(enum AVCodecID id);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-243">
+          <mxGeometry width="750" height="57" as="geometry">
+            <mxRectangle width="750" height="57" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-247" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-242">
+          <mxGeometry y="57" width="750" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-248" value="avcodec_find_encoder(): 특정 코덱의 인코더를 찾는 함수&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;AVCodec* avcodec_find_encoder(enum AVCodecID id);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-247">
+          <mxGeometry width="750" height="54" as="geometry">
+            <mxRectangle width="750" height="54" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-251" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-242">
+          <mxGeometry y="111" width="750" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-252" value="avcodec_open2(): 특정 코덱을 열어 인코딩/디코딩 작업을 시작하는 함수&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;int avcodec_open2(AVCodecContext* avctx, const AVCodec *codec, AVDictionary ** options);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-251">
+          <mxGeometry width="750" height="56" as="geometry">
+            <mxRectangle width="750" height="56" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-258" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-242">
+          <mxGeometry y="167" width="750" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-259" value="avcodec_receive_frame(): 디코딩된 프레임을 받아오는 함수&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;int avcodec_receive_frame(AVCodecContext* avctx, AVFrame* frame);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-258">
+          <mxGeometry width="750" height="56" as="geometry">
+            <mxRectangle width="750" height="56" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-255" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-242">
+          <mxGeometry y="223" width="750" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-256" value="avcodec_send_packet(): 코덱에 패킷을 전송하는 함수&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;int avcodec_send_packet(AVCodecContext* avctx, const AVPacket* packet);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-255">
+          <mxGeometry width="750" height="57" as="geometry">
+            <mxRectangle width="750" height="57" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
       </root>
