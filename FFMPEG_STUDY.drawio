@@ -887,7 +887,7 @@
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-243" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-242">
           <mxGeometry width="750" height="57" as="geometry" />
         </mxCell>
-        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-244" value="avcodec_find_decoder(): 특정 코덱의 디코더를 찾는 함수&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;AVCodec* avcodec_find_decoder(enum AVCodecID id);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-243">
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-244" value="&lt;b&gt;avcodec_find_decoder(): 특정 코덱의 디코더를 찾는 함수&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;AVCodec* avcodec_find_decoder(enum AVCodecID id);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-243">
           <mxGeometry width="750" height="57" as="geometry">
             <mxRectangle width="750" height="57" as="alternateBounds" />
           </mxGeometry>
@@ -895,7 +895,7 @@
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-247" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-242">
           <mxGeometry y="57" width="750" height="54" as="geometry" />
         </mxCell>
-        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-248" value="avcodec_find_encoder(): 특정 코덱의 인코더를 찾는 함수&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;AVCodec* avcodec_find_encoder(enum AVCodecID id);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-247">
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-248" value="&lt;b&gt;avcodec_find_encoder(): 특정 코덱의 인코더를 찾는 함수&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;AVCodec* avcodec_find_encoder(enum AVCodecID id);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-247">
           <mxGeometry width="750" height="54" as="geometry">
             <mxRectangle width="750" height="54" as="alternateBounds" />
           </mxGeometry>
@@ -903,7 +903,7 @@
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-251" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-242">
           <mxGeometry y="111" width="750" height="56" as="geometry" />
         </mxCell>
-        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-252" value="avcodec_open2(): 특정 코덱을 열어 인코딩/디코딩 작업을 시작하는 함수&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;int avcodec_open2(AVCodecContext* avctx, const AVCodec *codec, AVDictionary ** options);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-251">
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-252" value="&lt;b&gt;avcodec_open2(): 특정 코덱을 열어 인코딩/디코딩 작업을 시작하는 함수&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;int avcodec_open2(AVCodecContext* avctx, const AVCodec *codec, AVDictionary ** options);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-251">
           <mxGeometry width="750" height="56" as="geometry">
             <mxRectangle width="750" height="56" as="alternateBounds" />
           </mxGeometry>
@@ -911,7 +911,7 @@
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-258" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-242">
           <mxGeometry y="167" width="750" height="56" as="geometry" />
         </mxCell>
-        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-259" value="avcodec_receive_frame(): 디코딩된 프레임을 받아오는 함수&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;int avcodec_receive_frame(AVCodecContext* avctx, AVFrame* frame);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-258">
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-259" value="&lt;b&gt;avcodec_receive_frame(): 디코딩된 프레임을 받아오는 함수&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;int avcodec_receive_frame(AVCodecContext* avctx, AVFrame* frame);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-258">
           <mxGeometry width="750" height="56" as="geometry">
             <mxRectangle width="750" height="56" as="alternateBounds" />
           </mxGeometry>
@@ -919,9 +919,115 @@
         <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-255" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-242">
           <mxGeometry y="223" width="750" height="57" as="geometry" />
         </mxCell>
-        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-256" value="avcodec_send_packet(): 코덱에 패킷을 전송하는 함수&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;int avcodec_send_packet(AVCodecContext* avctx, const AVPacket* packet);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-255">
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-256" value="&lt;b&gt;avcodec_send_packet(): 코덱에 패킷을 전송하는 함수&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;int avcodec_send_packet(AVCodecContext* avctx, const AVPacket* packet);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-255">
           <mxGeometry width="750" height="57" as="geometry">
             <mxRectangle width="750" height="57" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-261" value="libavformat (포맷 라이브러리)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="1760" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-262" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1800" width="750" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-263" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-262">
+          <mxGeometry width="750" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-264" value="&lt;b&gt;avformat_open_input(): 멀티미디어 파일을 열고 입력 스트림을 초기화하는 함수&lt;/b&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;int avformat_open_input(AVFormatContext** ps, const char *filename, AVInputFormat* fmt, AVDictionary **options);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-263">
+          <mxGeometry width="750" height="57" as="geometry">
+            <mxRectangle width="750" height="57" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-265" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-262">
+          <mxGeometry y="57" width="750" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-266" value="&lt;b&gt;avformat_find_stream_info(): 미디어 파일의 스트림정보를 읽고, 스트림의 정보를 저장&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;int avformat_find_stream_info(AVFormatContext* ic, AVDictionary **options);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-265">
+          <mxGeometry width="750" height="54" as="geometry">
+            <mxRectangle width="750" height="54" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-267" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-262">
+          <mxGeometry y="111" width="750" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-268" value="&lt;b&gt;av_read_frame(): 비디오나 오디오 스트림에서 패킷을 읽는 함수&lt;/b&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;int av_read_frame(AVFormatContext* s, AVPacket *pkt);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-267">
+          <mxGeometry width="750" height="56" as="geometry">
+            <mxRectangle width="750" height="56" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-269" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-262">
+          <mxGeometry y="167" width="750" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-270" value="&lt;b&gt;avformat_write_header(): 새로운 멀티미디어 파일을 생성하거나, 기존 파일에 헤더를 기록하는 함수&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;int avformat_write_header(AVFormatContext* s, AVDictionary **options);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-269">
+          <mxGeometry width="750" height="56" as="geometry">
+            <mxRectangle width="750" height="56" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-271" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-262">
+          <mxGeometry y="223" width="750" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-272" value="&lt;b&gt;avformat_close_input(): 열려 있는 입력 파일 닫기&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;void avformat_close_input(AVForamtContext **ps);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-271">
+          <mxGeometry width="750" height="57" as="geometry">
+            <mxRectangle width="750" height="57" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-273" value="libavutil (유틸리티 라이브러리)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="2120" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-274" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="40" y="2160" width="750" height="223" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-275" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-274">
+          <mxGeometry width="750" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-276" value="&lt;b&gt;av_malloc(): 메모리 할당 함수&lt;/b&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;void* av_malloc(size_t size);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-275">
+          <mxGeometry width="750" height="57" as="geometry">
+            <mxRectangle width="750" height="57" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-277" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-274">
+          <mxGeometry y="57" width="750" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-278" value="&lt;b&gt;av_free(): FFmpeg에 할당된 메모리를 해제하는 함수&lt;/b&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;void av_free(void *ptr);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-277">
+          <mxGeometry width="750" height="54" as="geometry">
+            <mxRectangle width="750" height="54" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-279" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-274">
+          <mxGeometry y="111" width="750" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-280" value="&lt;b&gt;av_log(): FFmpeg에서 로깅을 위한 함수 (디버깅 정보나 오류 메시지를 출력)&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;void av_log(void** avcl, int level, const char *fmt, ...);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-279">
+          <mxGeometry width="750" height="56" as="geometry">
+            <mxRectangle width="750" height="56" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-281" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-274">
+          <mxGeometry y="167" width="750" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-282" value="&lt;b&gt;av_strlcpy(): 안전한 문자열 복사 함수 (오버플로우 방지)&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;size_t av_strlcpy(char* dst, const char* src, size_t size);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-281">
+          <mxGeometry width="750" height="56" as="geometry">
+            <mxRectangle width="750" height="56" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-285" value="libswscale (이미지 스케일링 라이브러리)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="2440" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-286" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="40" y="2480" width="750" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-287" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-286">
+          <mxGeometry width="750" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-288" value="&lt;div&gt;&lt;b&gt;sws_getContext(): 비디오 스케일링을 위한 컨텍스트를 초기화하는 함수&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-weight: bold;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;SwsContext* sws_getContext(int srcW, int srcH, enum AVPixelFormat srcForamt,&amp;nbsp;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp; &amp;nbsp; int dstW, intdstH, enum AVPixelFormat dst Format,&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;    int&lt;/span&gt;&amp;nbsp;flags, SwsFilter* srcFilter, SwsFilter* dstFilter,&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp; &amp;nbsp; const double* param);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-287">
+          <mxGeometry width="750" height="100" as="geometry">
+            <mxRectangle width="750" height="100" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-289" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-286">
+          <mxGeometry y="100" width="750" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-290" value="&lt;b&gt;sws_scale(): 비디오 스케일링을 수행하는 함수 (지정된 크기와 포맷으로 비디오 이미지를 변환)&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;int sws_scale(SwsContext* c, const uint8_t* const src[], const int srcStride[],&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;int srcSliceY, int srcSliceH, uint8_t* const dst[], const int dstStride[]);&lt;br&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;verticalAlign=top;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-289">
+          <mxGeometry width="750" height="70" as="geometry">
+            <mxRectangle width="750" height="70" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
       </root>
