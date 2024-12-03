@@ -831,7 +831,7 @@
             <mxRectangle width="137" height="47" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-216" value="-수신자가 전송하는 보고서&lt;div&gt;- 패킷 손실률, 지연 시간, 지터 등의 네트워크 품질 정보를 포함&lt;/div&gt;&lt;div&gt;- 송신자에게 피드백 제공&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-214">
+        <mxCell id="B-xb9QJz0Q4Br1Rd_6FL-216" value="- 수신자가 전송하는 보고서&lt;div&gt;- 패킷 손실률, 지연 시간, 지터 등의 네트워크 품질 정보를 포함&lt;/div&gt;&lt;div&gt;- 송신자에게 피드백 제공&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=12;align=left;" vertex="1" parent="B-xb9QJz0Q4Br1Rd_6FL-214">
           <mxGeometry x="137" width="544" height="47" as="geometry">
             <mxRectangle width="544" height="47" as="alternateBounds" />
           </mxGeometry>
