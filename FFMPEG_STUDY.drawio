@@ -1452,6 +1452,42 @@
             <mxRectangle width="110" height="27" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="QH4dxBqKKN-u96oLWNsD-103" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QH4dxBqKKN-u96oLWNsD-101" target="QH4dxBqKKN-u96oLWNsD-102">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QH4dxBqKKN-u96oLWNsD-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QH4dxBqKKN-u96oLWNsD-101" target="QH4dxBqKKN-u96oLWNsD-105">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QH4dxBqKKN-u96oLWNsD-101" value="rtsp 주소 입력" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-800" y="2440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QH4dxBqKKN-u96oLWNsD-108" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QH4dxBqKKN-u96oLWNsD-102" target="QH4dxBqKKN-u96oLWNsD-107">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QH4dxBqKKN-u96oLWNsD-102" value="수신 쓰레드" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-590" y="2400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QH4dxBqKKN-u96oLWNsD-111" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QH4dxBqKKN-u96oLWNsD-105" target="QH4dxBqKKN-u96oLWNsD-109">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QH4dxBqKKN-u96oLWNsD-105" value="화면 출력 쓰레드" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-590" y="2490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QH4dxBqKKN-u96oLWNsD-110" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QH4dxBqKKN-u96oLWNsD-107" target="QH4dxBqKKN-u96oLWNsD-109">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QH4dxBqKKN-u96oLWNsD-107" value="큐에 프레임 저장" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-390" y="2400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QH4dxBqKKN-u96oLWNsD-113" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QH4dxBqKKN-u96oLWNsD-109" target="QH4dxBqKKN-u96oLWNsD-112">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QH4dxBqKKN-u96oLWNsD-109" value="큐에서 프레임을 가져와 비트맵으로 변환" style="whiteSpace=wrap;html=1;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="-390" y="2490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QH4dxBqKKN-u96oLWNsD-112" value="PictureBox에 비트맵 이미지 출력" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-190" y="2490" width="120" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
