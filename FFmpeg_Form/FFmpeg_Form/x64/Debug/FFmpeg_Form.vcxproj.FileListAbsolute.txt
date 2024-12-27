@@ -1,0 +1,6 @@
+C:\Users\kimss\source\repos\FFmpeg_Form\FFmpeg_Form\x64\Debug\FFmpeg_Form.vcxproj.AssemblyReference.cache
+C:\Users\kimss\source\repos\FFmpeg_Form\FFmpeg_Form\x64\Debug\FFmpegForm.MyForm.resources
+C:\Users\kimss\source\repos\FFmpeg_Form\FFmpeg_Form\x64\Debug\FFmpeg_Form.vcxproj.GenerateResource.cache
+C:\Users\kimss\source\repos\FFmpeg_Form\FFmpeg_Form\x64\Debug\FFmpegForm.RTPStreamViewer.resources
+C:\Users\kimss\source\repos\FFmpeg_Form\FFmpeg_Form\x64\Debug\FFmpegForm.OpenFile.resources
+C:\Users\kimss\source\repos\FFmpeg_Form\FFmpeg_Form\x64\Debug\FFmpegForm.StreamViewer.resources
