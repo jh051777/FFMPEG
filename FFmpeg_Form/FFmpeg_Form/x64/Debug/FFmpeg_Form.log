@@ -3,7 +3,7 @@ C:\ffmpeg_b\include\libavutil\rational.h(1,1): warning C4819: 현재 코드 페�
   (소스 파일 'StreamViewer.cpp'을(를) 컴파일하는 중)
   
   OpenFile.obj : MSIL 모듈이 발견되었습니다. MSIL에 증분 링크를 사용할 수 없습니다. 전체 링크를 수행하고 있습니다.
-StreamViewer.obj : warning LNK4248: 확인되지 않은 형식 정의 토큰 (01000032)이 있습니다('AVDictionary'). 이미지가 실행되지 않습니다.
+StreamViewer.obj : warning LNK4248: 확인되지 않은 형식 정의 토큰 (01000033)이 있습니다('AVDictionary'). 이미지가 실행되지 않습니다.
   FFmpeg_Form.vcxproj -> C:\Users\kimss\source\repos\FFmpeg_Form\x64\Debug\FFmpeg_Form.exe
   'pwsh.exe'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
   배치 파일이 아닙니다.
