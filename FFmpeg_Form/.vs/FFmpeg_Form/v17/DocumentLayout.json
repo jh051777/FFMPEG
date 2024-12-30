@@ -25,7 +25,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 49,
+          "DockedWidth": 53,
           "SelectedChildIndex": 5,
           "Children": [
             {
@@ -50,8 +50,7 @@
               "RelativeToolTip": "FFmpeg_Form\\RTPStreamViewer.h",
               "ViewState": "AgIAANACAAAAAAAAAAAIwJ4CAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-23T06:49:48.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T06:49:48.364Z"
             },
             {
               "$type": "Document",
@@ -62,8 +61,7 @@
               "ToolTip": "C:\\Users\\kimss\\source\\repos\\FFmpeg_Form\\FFmpeg_Form\\RTPStreamViewer.h [\uB514\uC790\uC778]",
               "RelativeToolTip": "FFmpeg_Form\\RTPStreamViewer.h [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-27T01:06:13.4Z",
-              "EditorCaption": " [\uB514\uC790\uC778]"
+              "WhenOpened": "2024-12-27T01:06:13.4Z"
             },
             {
               "$type": "Document",
@@ -80,7 +78,7 @@
           ]
         },
         {
-          "DockedWidth": 100,
+          "DockedWidth": 96,
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -91,7 +89,7 @@
               "RelativeDocumentMoniker": "FFmpeg_Form\\StreamViewer.h",
               "ToolTip": "C:\\Users\\kimss\\source\\repos\\FFmpeg_Form\\FFmpeg_Form\\StreamViewer.h",
               "RelativeToolTip": "FFmpeg_Form\\StreamViewer.h",
-              "ViewState": "AgIAAIABAAAAAAAAAAAAwIgBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAECAAAAAAAAAAAIwBkCAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-12-17T06:00:31.217Z",
               "EditorCaption": ""

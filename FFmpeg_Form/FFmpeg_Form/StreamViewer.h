@@ -44,6 +44,8 @@ namespace FFmpegForm {
 	int frame_count;
 	std::atomic<int> second_counter(0);
 
+	delegate void update_time(int minutes, int seconds);
+
 	/// <summary>
 	/// StreamViewer에 대한 요약입니다.
 	/// </summary>
@@ -56,7 +58,9 @@ namespace FFmpegForm {
 		int vst_idx = -1;
 		Thread^ read_thread;
 		Thread^ draw_thread;
-		Thread^ time_thread;
+	private: System::Windows::Forms::SaveFileDialog^ sfd_screenshot;
+
+		   Thread^ time_thread;
 		
 	public:
 		StreamViewer(void)
@@ -89,7 +93,6 @@ namespace FFmpegForm {
 			this->Invoke(gcnew EventHandler(this, &StreamViewer::Exit_media));
 			OpenFile^ open_file = gcnew OpenFile();
 			if (open_file->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
-				//Stop_stream();
 				String^ input_str = open_file->input_url;
 				IntPtr ptrToNative = System::Runtime::InteropServices::Marshal::StringToHGlobalAnsi(input_str);
 				url = static_cast<char*>(ptrToNative.ToPointer());
@@ -115,12 +118,12 @@ namespace FFmpegForm {
 			clear_q();
 		}
 
+		// 스트림 정보 수신
 		void Receive_stream() {
 			avformat_network_init();
 
 			av_dict_set(&options, "timeout", "5000000", 0);
 
-			//fmt_ctx = avformat_alloc_context();
 			//av_log_set_level(AV_LOG_DEBUG);
 			int res = avformat_open_input(&fmt_ctx, url, NULL, &options);
 			av_dict_free(&options);
@@ -174,7 +177,7 @@ namespace FFmpegForm {
 			
 			avcodec_parameters_to_context(vcodec_ctx, fmt_ctx->streams[vst_idx]->codecpar);
 
-			// sws_ctx 재설정 (새 PictureBox 크기에 맞게)
+			// 픽셀 포맷 변경
 			if (vcodec_ctx->pix_fmt == AV_PIX_FMT_YUVJ420P) {
 				pix_fmt = AV_PIX_FMT_YUV420P;
 				Console::WriteLine("픽셀 포맷 변경 yuvj420p->yuv420p");
@@ -217,7 +220,6 @@ namespace FFmpegForm {
 			if (!fmt_ctx) {
 				Console::WriteLine("Error: fmt_ctx is nullptr");
 			}
-			
 			pkt = av_packet_alloc();
 			if (!pkt) {
 				ShowError("Failed to allocate AVPacket");
@@ -235,18 +237,17 @@ namespace FFmpegForm {
 				if (pkt->stream_index == vst_idx)
 				{
 					ret = avcodec_send_packet(vcodec_ctx, pkt);
-					vcodec_ctx->pix_fmt;
 					if (ret != 0)
 					{
 						continue;
 					}
 					while((ret = avcodec_receive_frame(vcodec_ctx, vframe)) == 0)
 					{
+						// 버퍼링
 						if (ret == AVERROR(EAGAIN)) {
 								break;
 						}
 						std::lock_guard<std::mutex> lock(q_mutex);
-
 						frame_q.push(av_frame_clone(vframe));
 						Console::WriteLine("Frame added to queue. Current count: " + frame_q.size());
 						
@@ -258,7 +259,7 @@ namespace FFmpegForm {
 			av_frame_free(&rgb_frame);
 			av_packet_free(&pkt);
 			avcodec_free_context(&vcodec_ctx);
-			avcodec_free_context(&acodec_ctx);
+			//avcodec_free_context(&acodec_ctx);
 			avformat_close_input(&fmt_ctx);
 
 			this->Invoke(gcnew Action(this, &StreamViewer::Stop_stream));
@@ -299,7 +300,8 @@ namespace FFmpegForm {
 			}
 		}
 
-		void Update_pb_bitmap() {
+		// 프레임 스케일링
+		void frame_scale() {
 			if (vcodec_ctx == nullptr || rgb_frame == nullptr || screenshot_frame == nullptr) {
 				std::cerr << "vcodec_ctx or rgb_frame == nullptr" << std::endl;
 				return;
@@ -335,6 +337,7 @@ namespace FFmpegForm {
 			static int buf_size = 0;
 			int screenshot_buf_size = av_image_get_buffer_size(AV_PIX_FMT_BGR24, vcodec_ctx->width, vcodec_ctx->height, 1);
 			int new_buf_size = av_image_get_buffer_size(AV_PIX_FMT_BGR24, media_width, media_height, 1);
+
 			if (!rgb_buf || buf_size != new_buf_size)
 			{
 				rgb_buf = (uint8_t*)av_malloc(new_buf_size);
@@ -351,13 +354,16 @@ namespace FFmpegForm {
 			av_frame_free(&screenshot_frame);
 			rgb_frame = av_frame_alloc();
 			screenshot_frame = av_frame_alloc();
-			//av_frame_unref(rgb_frame);
-			av_image_fill_arrays(rgb_frame->data, rgb_frame->linesize, rgb_buf, AV_PIX_FMT_BGR24, media_width, media_height, 1); // 종료 후 다시 스트리밍 시 에러
-			av_image_fill_arrays(screenshot_frame->data, screenshot_frame->linesize, screenshot_buf, AV_PIX_FMT_BGR24, vcodec_ctx->width, vcodec_ctx->height, 1);
+
+			av_image_fill_arrays(rgb_frame->data, rgb_frame->linesize, rgb_buf, AV_PIX_FMT_BGR24, 
+				media_width, media_height, 1);
+			av_image_fill_arrays(screenshot_frame->data, screenshot_frame->linesize, screenshot_buf, AV_PIX_FMT_BGR24, 
+				vcodec_ctx->width, vcodec_ctx->height, 1);
 
 			//Console::WriteLine("Updated sws context and RGB buffer for new PictureBox size.");
 		}
 		
+		// 폼 크기 변경 시 PictureBox 크기 처리 함수
 		void form_resize(Object^ sender, EventArgs^ e) {
 			try {
 				if (tlp_media->ClientSize.Width == 1 || tlp_media->ClientSize.Height == 1) {
@@ -391,8 +397,8 @@ namespace FFmpegForm {
 
 				pb_media->SizeMode = PictureBoxSizeMode::Zoom;
 
-				//this->Invoke(gcnew Action(this, &StreamViewer::Update_pb_bitmap));
-				Update_pb_bitmap();
+				//this->Invoke(gcnew Action(this, &StreamViewer::frame_scale));
+				frame_scale();
 			}
 			catch (Exception^ ex) {
 				Console::WriteLine("Error during form resize: " + ex->Message);
@@ -401,18 +407,19 @@ namespace FFmpegForm {
 
 		// 비트맵 이미지 그리기 // 쓰레드 시작
 		void draw_frame() {
-			//time_thread = gcnew Thread(gcnew ThreadStart(this, &StreamViewer::play_time));
-			//time_thread->IsBackground = true;
-			//time_thread->Start();
-			//bool enough_q = false;
+			time_thread = gcnew Thread(gcnew ThreadStart(this, &StreamViewer::play_time));
+			time_thread->IsBackground = true;
+			time_thread->Start();
+
 			const int target_fps = 33;
 			const auto target_frame_duration = std::chrono::milliseconds(1000 / target_fps);
 			this->Invoke(gcnew EventHandler(this, &StreamViewer::form_resize));
 
-			screenshot_frame = av_frame_alloc();
-			rgb_frame = av_frame_alloc();
+			
 			sws_ctx = sws_alloc_context();
 			screenshot_ctx = sws_alloc_context();
+			screenshot_frame = av_frame_alloc();
+			rgb_frame = av_frame_alloc();
 
 			while (isStreaming) {
 				auto frame_start_time = std::chrono::steady_clock::now();
@@ -429,7 +436,7 @@ namespace FFmpegForm {
 				if (frame_q.size() > 10) {
 					AVFrame* frame = Dequeue_frame();
 					if (!frame || !frame->data[0]) {
-						av_frame_unref(frame);
+						av_frame_free(&frame);
 						continue;
 					}
 
@@ -438,7 +445,7 @@ namespace FFmpegForm {
 						av_frame_free(&frame);
 						continue;
 					}
-					this->Invoke(gcnew Action(this, &StreamViewer::Update_pb_bitmap));
+					this->Invoke(gcnew Action(this, &StreamViewer::frame_scale));
 					
 					sws_scale(sws_ctx, frame->data, frame->linesize, 0, frame->height, rgb_frame->data, rgb_frame->linesize);
 					sws_scale(screenshot_ctx, frame->data, frame->linesize, 0, frame->height, screenshot_frame->data, screenshot_frame->linesize);
@@ -461,8 +468,8 @@ namespace FFmpegForm {
 						av_frame_free(&frame);
 					}
 					
-					pb_media->BeginInvoke(gcnew Action<Bitmap^>(this, &StreamViewer::Update_pb), bitmap);
-
+					this->BeginInvoke(gcnew Action<Bitmap^>(this, &StreamViewer::Update_pb), bitmap);
+					//Update_pb(bitmap);
 					av_frame_free(&frame);
 				}
 
@@ -478,16 +485,16 @@ namespace FFmpegForm {
 			screenshot_ctx = nullptr;
 
 			if (rgb_frame || screenshot_frame) {
-				//av_freep(&rgb_frame->data[0]);
 				av_frame_free(&rgb_frame);
 				av_frame_free(&screenshot_frame);
+				delete pb_media->Image;
 			}
 			
 			this->Invoke(gcnew Action(this, &StreamViewer::Stop_stream));
 			draw_thread->Join();
 		}
 
-
+		// 재생 시간 처리 함수 // 쓰레드 시작
 		void play_time() {
 			auto play_start_time = std::chrono::steady_clock::now();
 			while (isStreaming) {
@@ -499,7 +506,7 @@ namespace FFmpegForm {
 					int minutes = total_seconds / 60;
 					int seconds = total_seconds % 60;
 					
-					//this->Invoke(gcnew Action <int, int>(&StreamViewer::set_timer) , minutes, seconds);
+					this->Invoke(gcnew update_time(this, &StreamViewer::set_timer) , minutes, seconds);
 				}
 				std::this_thread::sleep_for(std::chrono::milliseconds(10));
 			}
@@ -507,6 +514,7 @@ namespace FFmpegForm {
 			time_thread->Join();
 		}
 		
+		// 재생 시간 띄우기
 		void set_timer(int minutes, int seconds) {
 			lbl_time->Text = String::Format("{0:D2} : {1:D2}", minutes, seconds);
 		}
@@ -525,17 +533,32 @@ namespace FFmpegForm {
 
 		// 스크린 샷
 		void Screenshot(Object^ sender, EventArgs^ e) {
+			if (pb_media->Image == nullptr)
+			{
+				MessageBox::Show("이미지가 없습니다.");
+				return;
+			}
 			DateTime^ date = DateTime::Now;
 			String^ name = date->ToString("yyyy-MM-dd-HH.mm.ss");
-			screenshot_bitmap->Save("C:/Users/kimss/Desktop/MediaPlayer Screenshot/" + name + ".jpg", Imaging::ImageFormat::Jpeg);
-			MessageBox::Show("스크린샷 완료");
+
+			sfd_screenshot->Filter = "JPEG Image|*.jpg";
+			sfd_screenshot->DefaultExt = "jpg";
+			sfd_screenshot->AddExtension = true;
+			sfd_screenshot->FileName = name + ".jpg";
+
+			if (sfd_screenshot->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
+				String^ file_path = sfd_screenshot->FileName;
+				screenshot_bitmap->Save(file_path, Imaging::ImageFormat::Jpeg);
+
+				MessageBox::Show("스크린샷 완료");
+			}
 		}
 
 		// 스트리밍 종료
 		void Exit_media(Object^ sender, EventArgs^ e) {
 			Stop_stream();
 			clearTimer = gcnew System::Windows::Forms::Timer();
-			clearTimer->Interval = 100;
+			clearTimer->Interval = 300;
 
 			clearTimer->Tick += gcnew EventHandler(this, &StreamViewer::remove_pb);
 
@@ -569,7 +592,7 @@ namespace FFmpegForm {
 
 		//void Start_stream() {
 		//	if (isStreaming) return;
-
+		//
 		//	isStreaming = true;
 		//	// Launch stream processing in a separate thread
 		//	Thread^ start_thread = gcnew Thread(gcnew ThreadStart(this, &StreamViewer::StreamRTP));
@@ -586,18 +609,18 @@ namespace FFmpegForm {
 		//	timer_delay = gcnew System::Windows::Forms::Timer();
 		//	timer_delay->Interval = 1000;
 		//	timer_delay->Tick += gcnew EventHandler(this, &StreamViewer::Timer_delay);
-
+//
 		//	timer_delay->Start();
 		//}
-
+//
 		// 스트림
 		//void StreamRTP() {
 		//	// FFmpeg 초기화
 		//	avformat_network_init();
-
+//
 		//	//FFmpeg^ call_format = gcnew FFmpeg();
 		//	//call_format->Format();
-
+//
 		//	//FFmpeg^ call_codec = gcnew FFmpeg();
 		//	//call_codec->Codec();
 		//
@@ -614,19 +637,19 @@ namespace FFmpegForm {
 		//	bitmap_queue = gcnew Queue();
 		//	
 		//	queue_mutex = gcnew System::Threading::Mutex();
-
+//
 		//	if (avformat_open_input(&fmt_ctx, url, NULL, NULL) != 0) {
 		//		ShowError("Failed to open stream.");
 		//		rtb_log->Text += gcnew String("url을 열 수 없습니다") + Environment::NewLine;
 		//		return;
 		//	}
-
+//
 		//	if (avformat_find_stream_info(fmt_ctx, NULL) < 0) {
 		//		ShowError("Failed to retrieve stream info.");
 		//		avformat_close_input(&fmt_ctx);
 		//		return;
 		//	}
-
+//
 		//	int vst_idx = -1;
 		//	for (unsigned i = 0; i < fmt_ctx->nb_streams; i++) {
 		//		if (fmt_ctx->streams[i]->codecpar->codec_type == AVMEDIA_TYPE_VIDEO) {
@@ -636,22 +659,22 @@ namespace FFmpegForm {
 		//			break;
 		//		}
 		//	}
-
+//
 		//	if (!codec || vst_idx == -1) {
 		//		ShowError("No video stream found.");
 		//		avformat_close_input(&fmt_ctx);
 		//		return;
 		//	}
-
+//
 		//	codec_ctx = avcodec_alloc_context3(codec);
 		//	vcodec_ctx = codec_ctx;
 		//	avcodec_parameters_to_context(vcodec_ctx, fmt_ctx->streams[vst_idx]->codecpar);
-
+//
 		//	/*AVDictionary* options = nullptr;
 		//	av_dict_set(&options, "framedrop", "1", 0);
 		//	av_dict_set(&options, "max_delay", "500000", 0);*/
-
-
+//
+//
 		//	int res = avcodec_open2(vcodec_ctx, codec, 0);
 		//	if (res < 0) {
 		//		MessageBox::Show("코덱 오픈 오류");
@@ -672,19 +695,19 @@ namespace FFmpegForm {
 		//		gcnew int64_t(fmt_ctx->streams[vst_idx]->codecpar->bit_rate / 1000) + " kb/s" + Environment::NewLine + Environment::NewLine;
 		//		
 		//	rtb_log->Invoke(gcnew Action<String^>(this, &StreamViewer::Update_log), codec_info);
-
+//
 		//	//int width = frame->width;
 		//	//int height = frame->height;
 		//	//uint8_t* buffer = (uint8_t*)av_malloc(bufferSize);
 		//	//uint8_t* screenshot_buffer = (uint8_t*)av_malloc(bufferSize);
 		//	//av_image_fill_arrays(rgb_frame->data, rgb_frame->linesize, buffer, AV_PIX_FMT_BGR24, width, height, 1);
 		//	//av_image_fill_arrays(screenshot_rgb_frame->data, screenshot_rgb_frame->linesize, screenshot_buffer, AV_PIX_FMT_BGR24, width, height, 1);
-
+//
 		//	static auto last_frame_time = std::chrono::high_resolution_clock::now();
 		//	//std::this_thread::sleep_for(std::chrono::milliseconds(10));
 		//	auto current_time = std::chrono::high_resolution_clock::now();
 		//	int ret;
-
+//
 		//	while ((av_read_frame(fmt_ctx, pkt) == 0) && (isStreaming != false)) {
 		//		if (pkt->stream_index == vst_idx) {
 		//			
@@ -701,7 +724,7 @@ namespace FFmpegForm {
 		//					break;
 		//				}
 		//				//video_frame = frame;
-
+//
 		//				//{
 		//					//queue_mutex->WaitOne();
 		//					//IntPtr ptr = IntPtr(frame);
@@ -728,18 +751,18 @@ namespace FFmpegForm {
 		//					av_image_fill_arrays(rgb_frame->data, rgb_frame->linesize, rgb_buf, AV_PIX_FMT_BGR24, frame->width, frame->height, 1);
 		//					av_image_fill_arrays(screenshot_rgb_frame->data, screenshot_rgb_frame->linesize, screenshot_buffer, AV_PIX_FMT_BGR24, frame->width, frame->height, 1);
 		//				}
-
+//
 		//				// 변환 수행
 		//				sws_scale(sws_ctx, frame->data, frame->linesize, 0, frame->height, rgb_frame->data, rgb_frame->linesize);
 		//				sws_scale(screenshot_ctx, frame->data, frame->linesize, 0, frame->height, screenshot_rgb_frame->data, screenshot_rgb_frame->linesize);
-
+//
 		//				// 비트맵으로 뿌리기
 		//				Bitmap^ bitmap = gcnew Bitmap(frame->width, frame->height, rgb_frame->linesize[0],
 		//					Imaging::PixelFormat::Format24bppRgb, IntPtr(rgb_frame->data[0]));
-
+//
 		//				screenshot_bitmap = gcnew Bitmap(frame->width, frame->height, screenshot_rgb_frame->linesize[0],
 		//					Imaging::PixelFormat::Format24bppRgb, IntPtr(screenshot_rgb_frame->data[0]));
-
+//
 		//				{
 		//					queue_mutex->WaitOne();
 		//					bitmap_queue->Enqueue(bitmap);
@@ -751,7 +774,7 @@ namespace FFmpegForm {
 		//		}
 		//		av_packet_unref(pkt);
 		//	}
-
+//
 		//	// Cleanup
 		//	
 		//	//av_free(screenshot_buffer);
@@ -763,16 +786,15 @@ namespace FFmpegForm {
 		//	sws_freeContext(screenshot_ctx);
 		//	avcodec_free_context(&codec_ctx);
 		//	avformat_close_input(&fmt_ctx);
-
+//
 		//	this->Invoke(gcnew Action(this, &StreamViewer::Stop_stream));
 		//}
-
-		
-
+//
+	//	
+//
 		/*AVFrame* GetAVFrameFromQueue(IntPtr ptr) {
 			return static_cast<AVFrame*>(ptr.ToPointer());
 		}*/
-
 		/*Bitmap^ ConvertAVFrameToBitmap(AVFrame* frame) {
 			AVFrame* rgb_frame = av_frame_alloc();
 			SwsContext* sws_ctx = sws_getContext(frame->width, frame->height, video_codec_ctx->pix_fmt,
@@ -813,7 +835,7 @@ namespace FFmpegForm {
 			}
 			return nullptr;
 		}*/
-
+//
 		//void Dequeue_bitmap(Object^ sender, EventArgs^ e) {
 		//	Bitmap^ dequeue_bitmap = GetBitmapQueue();
 		//	if (dequeue_bitmap != nullptr && isStreaming != false /* && pb_media->InvokeRequired*/) {
@@ -882,8 +904,8 @@ protected:
 			this->tlp_left = (gcnew System::Windows::Forms::TableLayoutPanel());
 			this->btn_open = (gcnew System::Windows::Forms::Button());
 			this->lbl_fps = (gcnew System::Windows::Forms::Label());
-			this->rtb_log = (gcnew System::Windows::Forms::RichTextBox());
 			this->lbl_time = (gcnew System::Windows::Forms::Label());
+			this->rtb_log = (gcnew System::Windows::Forms::RichTextBox());
 			this->tlp_media = (gcnew System::Windows::Forms::TableLayoutPanel());
 			this->pb_media = (gcnew System::Windows::Forms::PictureBox());
 			this->ctms_right = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
@@ -892,6 +914,7 @@ protected:
 			this->openFileDialog = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->frame_timer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->timer_delay = (gcnew System::Windows::Forms::Timer(this->components));
+			this->sfd_screenshot = (gcnew System::Windows::Forms::SaveFileDialog());
 			this->tlp_main->SuspendLayout();
 			this->tlp_left->SuspendLayout();
 			this->tlp_media->SuspendLayout();
@@ -966,19 +989,6 @@ protected:
 			this->lbl_fps->TabIndex = 1;
 			this->lbl_fps->Text = L"FPS:";
 			// 
-			// rtb_log
-			// 
-			this->rtb_log->BackColor = System::Drawing::Color::Silver;
-			this->rtb_log->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->rtb_log->Font = (gcnew System::Drawing::Font(L"맑은 고딕", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(129)));
-			this->rtb_log->Location = System::Drawing::Point(20, 140);
-			this->rtb_log->Margin = System::Windows::Forms::Padding(20, 20, 0, 20);
-			this->rtb_log->Name = L"rtb_log";
-			this->rtb_log->Size = System::Drawing::Size(230, 486);
-			this->rtb_log->TabIndex = 2;
-			this->rtb_log->Text = L"";
-			// 
 			// lbl_time
 			// 
 			this->lbl_time->AutoSize = true;
@@ -992,6 +1002,19 @@ protected:
 			this->lbl_time->Size = System::Drawing::Size(166, 80);
 			this->lbl_time->TabIndex = 2;
 			this->lbl_time->Text = L"00 : 00";
+			// 
+			// rtb_log
+			// 
+			this->rtb_log->BackColor = System::Drawing::Color::Silver;
+			this->rtb_log->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->rtb_log->Font = (gcnew System::Drawing::Font(L"맑은 고딕", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(129)));
+			this->rtb_log->Location = System::Drawing::Point(20, 140);
+			this->rtb_log->Margin = System::Windows::Forms::Padding(20, 20, 0, 20);
+			this->rtb_log->Name = L"rtb_log";
+			this->rtb_log->Size = System::Drawing::Size(230, 486);
+			this->rtb_log->TabIndex = 2;
+			this->rtb_log->Text = L"";
 			// 
 			// tlp_media
 			// 
@@ -1072,6 +1095,7 @@ protected:
 		}
 
 #pragma endregion
+
 
 };
 	[STAThread]
