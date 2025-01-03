@@ -948,6 +948,7 @@ namespace FFmpegForm {
 			// 
 			// pb_media
 			// 
+			this->pb_media->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->pb_media->BackColor = System::Drawing::Color::Gray;
 			this->pb_media->Location = System::Drawing::Point(20, 20);
 			this->pb_media->Margin = System::Windows::Forms::Padding(20);
