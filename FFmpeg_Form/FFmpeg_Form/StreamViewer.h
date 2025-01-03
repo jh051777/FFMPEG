@@ -5,7 +5,6 @@
 #include <thread>
 #include <queue>
 #include <mutex>
-#include <condition_variable>
 
 extern "C" {
 #include <libavformat/avformat.h>
@@ -66,6 +65,8 @@ namespace FFmpegForm {
 		Thread^ draw_thread;
 	private: System::Windows::Forms::SaveFileDialog^ sfd_screenshot;
 	private: System::Windows::Forms::Label^ lbl_mouse;
+	private: System::Windows::Forms::TableLayoutPanel^ tbl_bottom;
+
 
 		   Thread^ time_thread;
 	public:
@@ -120,8 +121,11 @@ namespace FFmpegForm {
 
 		// 스트림 정지
 		void Stop_stream() {
-			isStreaming = false;
-			clear_q();
+			if (isStreaming) {
+				isStreaming = false;
+				clear_q();
+				Console::WriteLine("스트리밍 종료");
+			}
 		}
 
 
@@ -271,6 +275,7 @@ namespace FFmpegForm {
 
 			this->Invoke(gcnew Action(this, &StreamViewer::Stop_stream));
 			read_thread->Join();
+			draw_thread->Join();
 		}
 
 		// 큐에서 프레임 가져오기
@@ -374,10 +379,9 @@ namespace FFmpegForm {
 			//av_free(rgb_buf);
 			//av_free(screenshot_buf);
 			Console::WriteLine("[frame_scale] 프레임에 데이터 배열 생성 완료");
-			//Console::WriteLine("Updated sws context and RGB buffer for new PictureBox size.");
-			//av_frame_unref(rgb_frame);
-			//av_frame_unref(screenshot_frame);
-
+			//av_frame_free(&rgb_frame);
+			//av_frame_free(&screenshot_frame);
+			Console::WriteLine("[frame_scale] rgb_frame, screenshot_frame 프리 완료");
 		}
 
 		void mouse_hover(Object^ sender, EventArgs^ e) {
@@ -388,7 +392,7 @@ namespace FFmpegForm {
 			lbl_mouse->Visible = false;
 		}
 
-		// MouseDown 이벤트
+		// 폼 사이즈 변경 시작 이벤트
 		void form_resize_start(Object^ sender, EventArgs^ e) {
 			isResizing = true;
 			Console::WriteLine("Resize Started");
@@ -400,7 +404,7 @@ namespace FFmpegForm {
 			lbl_mouse->Text = "(" + e->X + ", " + e->Y + ")";
 		}
 
-		// MouseUp 이벤트
+		// 폼 사이즈 변경 종료 이벤트
 		void form_resize_end(Object^ sender, EventArgs^ e) {
 			if (isResizing) {
 				isResizing = false;
@@ -409,6 +413,7 @@ namespace FFmpegForm {
 			}
 		}
 
+		// 폼 최대화 시 이벤트
 		void form_size_changed(Object^ sender, EventArgs^ e) {
 			Console::WriteLine("Size Changed");
 			form_resize(sender, e);
@@ -446,9 +451,8 @@ namespace FFmpegForm {
 
 				pb_media->Width = target_width;
 				pb_media->Height = target_height;
-				pb_media->Margin.Left = (form_width - target_width) / 2;
-				pb_media->Margin.Top = (form_height - target_height) / 2;
-				//pb_media->Location = Point(form_width - target_width / 2, form_height - target_width / 2);
+				pb_media->Left = (form_width - target_width) / 2;
+				pb_media->Top = (form_height - target_height) / 2;
 
 				if (target_width < 1 || target_height < 1) {
 					isResizing = false;
@@ -485,6 +489,7 @@ namespace FFmpegForm {
 			screenshot_ctx = sws_alloc_context();
 			screenshot_frame = av_frame_alloc();
 			rgb_frame = av_frame_alloc();
+
 			Console::WriteLine("[draw_frame] 컨텍스트, 프레임 alloc 완료");
 
 			while (isStreaming) {
@@ -506,7 +511,7 @@ namespace FFmpegForm {
 					continue;
 				}
 
-				if (frame_q.size() > 40) {
+				if (frame_q.size() > 30) {
 					while (frame_q.size() > 5) {
 						AVFrame* d_frame = frame_q.front();
 						frame_q.pop();
@@ -529,7 +534,9 @@ namespace FFmpegForm {
 						av_frame_free(&frame);
 						continue;
 					}
+
 					this->Invoke(gcnew Action(this, &StreamViewer::frame_scale));
+
 					Console::WriteLine("[draw_frame 2] 드로우 쓰레드에서 스케일링 실행");
 					sws_scale(sws_ctx, frame->data, frame->linesize, 0, frame->height, rgb_frame->data, rgb_frame->linesize);
 					sws_scale(screenshot_ctx, frame->data, frame->linesize, 0, frame->height, screenshot_frame->data, screenshot_frame->linesize);
@@ -547,8 +554,7 @@ namespace FFmpegForm {
 							vcodec_ctx->width, vcodec_ctx->height, screenshot_frame->linesize[0],
 							Imaging::PixelFormat::Format24bppRgb, IntPtr(screenshot_frame->data[0])
 						);
-						Console::WriteLine("[draw_frame 4] 비트맵 이미지 생성 완료");
-
+						Console::WriteLine("[draw_frame 4] 비트맵 이미지 생성 완료");						
 					}
 					catch (System::Exception^ ex) {
 						Console::WriteLine("[draw_frame] Bitmap update error: " + ex->Message);
@@ -559,6 +565,7 @@ namespace FFmpegForm {
 					Console::WriteLine("[draw_frame 5] 비트맵 출력 함수 실행");
 					//Update_pb(bitmap);
 					av_frame_free(&frame);
+
 					Console::WriteLine("[draw_frame 6] 루프 종료 및 프레임 free");
 				}
 				else {
@@ -585,8 +592,8 @@ namespace FFmpegForm {
 				Console::WriteLine("[draw_frame] 드로우 쓰레드에서 배열이 저장된 프레임 해제");
 			}
 
-			this->Invoke(gcnew Action(this, &StreamViewer::Stop_stream));
-			draw_thread->Join();
+			//this->Invoke(gcnew Action(this, &StreamViewer::Stop_stream));
+			//draw_thread->Join();
 		}
 
 		// 재생 시간 처리 함수 // 쓰레드 시작
@@ -999,10 +1006,11 @@ namespace FFmpegForm {
 			this->tlp_left = (gcnew System::Windows::Forms::TableLayoutPanel());
 			this->btn_open = (gcnew System::Windows::Forms::Button());
 			this->lbl_fps = (gcnew System::Windows::Forms::Label());
-			this->lbl_time = (gcnew System::Windows::Forms::Label());
 			this->rtb_log = (gcnew System::Windows::Forms::RichTextBox());
 			this->tlp_media = (gcnew System::Windows::Forms::TableLayoutPanel());
 			this->pb_media = (gcnew System::Windows::Forms::PictureBox());
+			this->tbl_bottom = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->lbl_time = (gcnew System::Windows::Forms::Label());
 			this->lbl_mouse = (gcnew System::Windows::Forms::Label());
 			this->ctms_right = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
 			this->cms_screenshot = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -1015,6 +1023,7 @@ namespace FFmpegForm {
 			this->tlp_left->SuspendLayout();
 			this->tlp_media->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pb_media))->BeginInit();
+			this->tbl_bottom->SuspendLayout();
 			this->ctms_right->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -1024,11 +1033,11 @@ namespace FFmpegForm {
 			this->tlp_main->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			this->tlp_main->ColumnCount = 2;
-			this->tlp_main->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 17.34435F)));
-			this->tlp_main->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 82.65565F)));
+			this->tlp_main->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 15)));
+			this->tlp_main->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 85)));
 			this->tlp_main->Controls->Add(this->tlp_left, 0, 0);
 			this->tlp_main->Controls->Add(this->tlp_media, 1, 0);
-			this->tlp_main->Controls->Add(this->lbl_mouse, 1, 1);
+			this->tlp_main->Controls->Add(this->tbl_bottom, 1, 1);
 			this->tlp_main->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->tlp_main->Location = System::Drawing::Point(0, 0);
 			this->tlp_main->Margin = System::Windows::Forms::Padding(0);
@@ -1041,33 +1050,33 @@ namespace FFmpegForm {
 			// 
 			// tlp_left
 			// 
+			this->tlp_left->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			this->tlp_left->ColumnCount = 1;
 			this->tlp_left->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 100)));
 			this->tlp_left->Controls->Add(this->btn_open, 0, 0);
 			this->tlp_left->Controls->Add(this->lbl_fps, 0, 1);
-			this->tlp_left->Controls->Add(this->lbl_time, 0, 3);
 			this->tlp_left->Controls->Add(this->rtb_log, 0, 2);
 			this->tlp_left->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->tlp_left->Location = System::Drawing::Point(3, 3);
-			this->tlp_left->MaximumSize = System::Drawing::Size(250, 0);
 			this->tlp_left->Name = L"tlp_left";
 			this->tlp_left->RowCount = 4;
 			this->tlp_left->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 80)));
 			this->tlp_left->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 40)));
 			this->tlp_left->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 100)));
 			this->tlp_left->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 80)));
-			this->tlp_left->Size = System::Drawing::Size(250, 788);
+			this->tlp_left->Size = System::Drawing::Size(234, 788);
 			this->tlp_left->TabIndex = 1;
 			// 
 			// btn_open
 			// 
 			this->btn_open->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->btn_open->Font = (gcnew System::Drawing::Font(L"맑은 고딕", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->btn_open->Font = (gcnew System::Drawing::Font(L"맑은 고딕", 10.125F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(129)));
 			this->btn_open->Location = System::Drawing::Point(20, 20);
 			this->btn_open->Margin = System::Windows::Forms::Padding(20);
 			this->btn_open->Name = L"btn_open";
-			this->btn_open->Size = System::Drawing::Size(210, 40);
+			this->btn_open->Size = System::Drawing::Size(194, 40);
 			this->btn_open->TabIndex = 0;
 			this->btn_open->Text = L"Open";
 			this->btn_open->UseVisualStyleBackColor = true;
@@ -1083,23 +1092,9 @@ namespace FFmpegForm {
 			this->lbl_fps->Location = System::Drawing::Point(20, 80);
 			this->lbl_fps->Margin = System::Windows::Forms::Padding(20, 0, 20, 0);
 			this->lbl_fps->Name = L"lbl_fps";
-			this->lbl_fps->Size = System::Drawing::Size(210, 40);
+			this->lbl_fps->Size = System::Drawing::Size(194, 40);
 			this->lbl_fps->TabIndex = 1;
 			this->lbl_fps->Text = L"FPS:";
-			// 
-			// lbl_time
-			// 
-			this->lbl_time->AutoSize = true;
-			this->lbl_time->Dock = System::Windows::Forms::DockStyle::Right;
-			this->lbl_time->Font = (gcnew System::Drawing::Font(L"맑은 고딕", 16.125F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(129)));
-			this->lbl_time->ForeColor = System::Drawing::Color::White;
-			this->lbl_time->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->lbl_time->Location = System::Drawing::Point(81, 708);
-			this->lbl_time->Name = L"lbl_time";
-			this->lbl_time->Size = System::Drawing::Size(166, 80);
-			this->lbl_time->TabIndex = 2;
-			this->lbl_time->Text = L"00 : 00";
 			// 
 			// rtb_log
 			// 
@@ -1108,9 +1103,9 @@ namespace FFmpegForm {
 			this->rtb_log->Font = (gcnew System::Drawing::Font(L"맑은 고딕", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(129)));
 			this->rtb_log->Location = System::Drawing::Point(20, 140);
-			this->rtb_log->Margin = System::Windows::Forms::Padding(20, 20, 0, 20);
+			this->rtb_log->Margin = System::Windows::Forms::Padding(20);
 			this->rtb_log->Name = L"rtb_log";
-			this->rtb_log->Size = System::Drawing::Size(230, 548);
+			this->rtb_log->Size = System::Drawing::Size(194, 548);
 			this->rtb_log->TabIndex = 2;
 			this->rtb_log->Text = L"";
 			// 
@@ -1121,19 +1116,19 @@ namespace FFmpegForm {
 			this->tlp_media->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle()));
 			this->tlp_media->Controls->Add(this->pb_media, 0, 1);
 			this->tlp_media->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tlp_media->Location = System::Drawing::Point(280, 3);
+			this->tlp_media->Location = System::Drawing::Point(243, 3);
 			this->tlp_media->Name = L"tlp_media";
 			this->tlp_media->RowCount = 1;
 			this->tlp_media->RowStyles->Add((gcnew System::Windows::Forms::RowStyle()));
-			this->tlp_media->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 20)));
-			this->tlp_media->Size = System::Drawing::Size(1317, 788);
+			this->tlp_media->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 100)));
+			this->tlp_media->Size = System::Drawing::Size(1354, 788);
 			this->tlp_media->TabIndex = 3;
 			// 
 			// pb_media
 			// 
 			this->pb_media->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->pb_media->BackColor = System::Drawing::Color::Gray;
-			this->pb_media->Location = System::Drawing::Point(17, 10);
+			this->pb_media->Location = System::Drawing::Point(36, 10);
 			this->pb_media->Margin = System::Windows::Forms::Padding(0);
 			this->pb_media->Name = L"pb_media";
 			this->pb_media->Size = System::Drawing::Size(1282, 768);
@@ -1144,17 +1139,46 @@ namespace FFmpegForm {
 			this->pb_media->MouseHover += gcnew System::EventHandler(this, &StreamViewer::mouse_hover);
 			this->pb_media->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &StreamViewer::form_mouse_move);
 			// 
+			// tbl_bottom
+			// 
+			this->tbl_bottom->ColumnCount = 2;
+			this->tbl_bottom->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 50)));
+			this->tbl_bottom->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 50)));
+			this->tbl_bottom->Controls->Add(this->lbl_time, 0, 0);
+			this->tbl_bottom->Controls->Add(this->lbl_mouse, 1, 0);
+			this->tbl_bottom->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->tbl_bottom->Location = System::Drawing::Point(243, 797);
+			this->tbl_bottom->Name = L"tbl_bottom";
+			this->tbl_bottom->RowCount = 1;
+			this->tbl_bottom->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 100)));
+			this->tbl_bottom->Size = System::Drawing::Size(1354, 100);
+			this->tbl_bottom->TabIndex = 5;
+			// 
+			// lbl_time
+			// 
+			this->lbl_time->AutoSize = true;
+			this->lbl_time->Font = (gcnew System::Drawing::Font(L"맑은 고딕", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(129)));
+			this->lbl_time->ForeColor = System::Drawing::Color::White;
+			this->lbl_time->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->lbl_time->Location = System::Drawing::Point(3, 0);
+			this->lbl_time->Name = L"lbl_time";
+			this->lbl_time->Size = System::Drawing::Size(126, 45);
+			this->lbl_time->TabIndex = 2;
+			this->lbl_time->Text = L"00 : 00";
+			// 
 			// lbl_mouse
 			// 
+			this->lbl_mouse->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->lbl_mouse->AutoSize = true;
-			this->lbl_mouse->Dock = System::Windows::Forms::DockStyle::Right;
-			this->lbl_mouse->Font = (gcnew System::Drawing::Font(L"맑은 고딕", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->lbl_mouse->Font = (gcnew System::Drawing::Font(L"맑은 고딕", 10.125F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(129)));
 			this->lbl_mouse->ForeColor = System::Drawing::Color::White;
-			this->lbl_mouse->Location = System::Drawing::Point(1597, 794);
+			this->lbl_mouse->Location = System::Drawing::Point(1226, 0);
 			this->lbl_mouse->Name = L"lbl_mouse";
-			this->lbl_mouse->Size = System::Drawing::Size(0, 106);
+			this->lbl_mouse->Size = System::Drawing::Size(125, 37);
 			this->lbl_mouse->TabIndex = 4;
+			this->lbl_mouse->Text = L"ㅇㅇㅇㅇ";
 			// 
 			// ctms_right
 			// 
@@ -1205,11 +1229,12 @@ namespace FFmpegForm {
 			this->ResizeEnd += gcnew System::EventHandler(this, &StreamViewer::form_resize_end);
 			this->SizeChanged += gcnew System::EventHandler(this, &StreamViewer::form_size_changed);
 			this->tlp_main->ResumeLayout(false);
-			this->tlp_main->PerformLayout();
 			this->tlp_left->ResumeLayout(false);
 			this->tlp_left->PerformLayout();
 			this->tlp_media->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pb_media))->EndInit();
+			this->tbl_bottom->ResumeLayout(false);
+			this->tbl_bottom->PerformLayout();
 			this->ctms_right->ResumeLayout(false);
 			this->ResumeLayout(false);
 

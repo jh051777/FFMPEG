@@ -17,7 +17,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 58,
+          "DockedWidth": 33,
           "SelectedChildIndex": 3,
           "Children": [
             {
@@ -47,7 +47,7 @@
           ]
         },
         {
-          "DockedWidth": 91,
+          "DockedWidth": 116,
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -58,7 +58,7 @@
               "RelativeDocumentMoniker": "FFmpeg_Form\\StreamViewer.h",
               "ToolTip": "C:\\Users\\kimss\\source\\repos\\FFmpeg_Form\\FFmpeg_Form\\StreamViewer.h",
               "RelativeToolTip": "FFmpeg_Form\\StreamViewer.h",
-              "ViewState": "AgIAAGEBAAAAAAAAAAAUwHoBAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAgCAAAAAAAAAAAUwBsCAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-12-17T06:00:31.217Z",
               "EditorCaption": ""
