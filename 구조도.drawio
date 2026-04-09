@@ -1,9 +1,117 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.5.0">
   <diagram name="페이지-1" id="YFOp-hUw_2FqSCZ9C7wB">
-    <mxGraphModel>
+    <mxGraphModel dx="2736" dy="1382" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-3" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;b&gt;RTSP / Video Input&lt;/b&gt;&lt;div&gt;&lt;b&gt;(avformat_open_input)&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="200" x="80" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-55" edge="1" parent="1" source="KhCU8TzYH7qs-hQnapBD-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="KhCU8TzYH7qs-hQnapBD-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;" value="&lt;b&gt;Bitmap 변환&lt;/b&gt;" vertex="1">
+          <mxGeometry height="45" width="155" x="102.5" y="714" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-12" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="50" width="180" x="90" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-10" parent="KhCU8TzYH7qs-hQnapBD-12" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.merge_or_storage;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="" vertex="1">
+          <mxGeometry height="50" width="180" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-11" parent="KhCU8TzYH7qs-hQnapBD-12" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;Packet Read&lt;/b&gt;&lt;div&gt;(av_read_frame)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="130" x="25" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;align=left;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;b&gt;Video Decode&lt;/b&gt;&lt;div&gt;- avcodec_send_packet&lt;/div&gt;&lt;div&gt;- avcodec_receive_frame&lt;/div&gt;" vertex="1">
+          <mxGeometry height="58" width="160" x="100" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-19" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;b&gt;Frame Queue (std::queue&amp;lt;AVFrame*&amp;gt;)&lt;/b&gt;&lt;div&gt;- Mutex Lock (thread-safe)&lt;/div&gt;&lt;div&gt;- Frame Push / Pop&lt;/div&gt;&lt;div&gt;- Queue Size Monitoring&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="225" x="68" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-50" edge="1" parent="1" source="KhCU8TzYH7qs-hQnapBD-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="KhCU8TzYH7qs-hQnapBD-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;align=left;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;b&gt;Frame Dequeue&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="150" x="105" y="497" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-21" edge="1" parent="1" source="KhCU8TzYH7qs-hQnapBD-3" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="KhCU8TzYH7qs-hQnapBD-11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="210" y="310" as="sourcePoint" />
+            <mxPoint x="260" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-23" edge="1" parent="1" source="KhCU8TzYH7qs-hQnapBD-10" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" target="KhCU8TzYH7qs-hQnapBD-18" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="210" y="310" as="sourcePoint" />
+            <mxPoint x="260" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-29" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="80" width="175" x="92.5" y="865" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-27" parent="KhCU8TzYH7qs-hQnapBD-29" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=process;whiteSpace=wrap;rounded=1;size=0.14;arcSize=6;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="80" width="175" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-28" parent="KhCU8TzYH7qs-hQnapBD-29" style="text;html=1;whiteSpace=wrap;strokeColor=#9673a6;fillColor=#e1d5e7;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;FPS 계산 &amp;amp; Display&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="105" x="35" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-32" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=card;whiteSpace=wrap;size=20;arcSize=12;fillColor=#f8cecc;strokeColor=#b85450;" value="" vertex="1">
+          <mxGeometry height="40" width="130" x="328" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Delay / Buffing Issue 발생 지점" vertex="1">
+          <mxGeometry height="30" width="120" x="338" y="375" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-35" edge="1" parent="1" source="KhCU8TzYH7qs-hQnapBD-19" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.002;entryY=0.498;entryDx=0;entryDy=0;entryPerimeter=0;" target="KhCU8TzYH7qs-hQnapBD-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-36" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" value="" vertex="1">
+          <mxGeometry height="100" width="50" x="458" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-37" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;rounded=0;fontStyle=1;flipV=1;legacyAnchorPoints=0;" value="Frame Drop (Queue Overflow 시)" vertex="1">
+          <mxGeometry height="30" width="192" x="508" y="325" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-38" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;rounded=0;fontStyle=1;flipV=1;legacyAnchorPoints=0;" value="Max Queue Size 제한" vertex="1">
+          <mxGeometry height="30" width="120" x="508" y="375" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-40" edge="1" parent="1" source="KhCU8TzYH7qs-hQnapBD-36" style="endArrow=none;html=1;rounded=0;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="484" y="390" as="sourcePoint" />
+            <mxPoint x="508" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-41" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;rounded=0;fontStyle=1;flipV=1;legacyAnchorPoints=0;" value="Thread 분리 구조" vertex="1">
+          <mxGeometry height="30" width="120" x="508" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-52" edge="1" parent="1" source="KhCU8TzYH7qs-hQnapBD-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="KhCU8TzYH7qs-hQnapBD-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-49" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;align=left;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;b&gt;Pixel 변환&lt;/b&gt;&lt;div&gt;&lt;b&gt;(sws_scale)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;YUV -&amp;gt; RGB&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="105" y="547" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-51" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;align=left;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;b&gt;Frame Resize&lt;/b&gt;&lt;div&gt;&lt;b&gt;(Aspect Ratio 유지)&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="150" x="105" y="627" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-56" edge="1" parent="1" source="KhCU8TzYH7qs-hQnapBD-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="KhCU8TzYH7qs-hQnapBD-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-54" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;" value="&lt;b&gt;PictureBox Rendering&lt;/b&gt;" vertex="1">
+          <mxGeometry height="45" width="155" x="102.5" y="785" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-57" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Decode Thread" vertex="1">
+          <mxGeometry height="20" width="142" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-58" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Frame Buffer (Shared" vertex="1">
+          <mxGeometry height="20" width="172" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-59" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Render Thread" vertex="1">
+          <mxGeometry height="20" width="142" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-60" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="UI Thread" vertex="1">
+          <mxGeometry height="20" width="142" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="KhCU8TzYH7qs-hQnapBD-61" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontStyle=1;fontSize=14;" value="디코딩, 렌더링, UI 처리를 각각 독립된 스레드로 분리&lt;div&gt;프레임 큐 기반 버퍼링 구조를 통해 실시간 스트리밍 환경에서의 지연 최소화&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Queue Overflow 상황에서 Frame Drop 전략을 적용하여 지속적인 실시간성을 유지하도록 설계&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="580" x="80" y="1000" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
